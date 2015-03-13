@@ -1,0 +1,10 @@
+Robert Lyons
+rglyons
+pa1
+README
+
+List.java - implementation of doubly linked list ADT
+Lex.java - Client for List.java; sorts an input file alphabetically into an output file
+ListClient.java - test for List.java
+Makefile
+README

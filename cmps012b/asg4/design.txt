@@ -1,0 +1,25 @@
+Robert Lyons
+rglyons
+cmps012b
+11/30/14
+design.txt
+A description of how cyoa.java is organized, what data structures were implemented, and why those data structures were chosen.
+
+It looks like a singly linked list might be the simplest way to implement the
+collection of the rooms as a whole, where each room is a node in the list.
+Also considered was a binary tree or doubly linked list, because all nodes are connected in those
+structures as well, and they are more efficient than a singly linked list, however navigation through a tree or doubly linked list is more difficult than
+navigation through a singly linked list in this context.
+
+The descritptions will be loaded into an array that is part of the room node
+class. Another idea for the description list is a queue, but an array is
+easier to implement and works just fine.
+
+A stack seems like a good way to keep track of the rooms visited.
+With this data structure one can easily keep track of the past moves and the
+current room (top of stack), as well as delete the current room step and move to the previous
+step in the event of an undo command (aka a pop). A linked list could potentially work as
+well...
+
+As for the options of each room, I decided to go with a list of options
+objects. This was the best way to give each option its destination tag. 

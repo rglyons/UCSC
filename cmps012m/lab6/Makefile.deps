@@ -1,0 +1,3 @@
+# Makefile.deps created Fri Nov 21 18:59:28 PST 2014
+queue.o: queue.c queue.h
+main.o: main.c queue.h

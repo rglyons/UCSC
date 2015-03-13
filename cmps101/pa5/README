@@ -1,0 +1,24 @@
+Robert Lyons
+rglyons
+pa5
+README
+
+List of files to be submitted for pa5 -------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Graph.c: Modification of Graph ADT from pa4, added transpose and copy graph construction functionality, and replaced BFS with DFS to accomplish the goal of determining strongly connected components (versus shortest paths in pa4). Also added to the Graph object were the discover and finish time arrays, taking the place of the distance from source array in pa4.
+
+Graph.h: Header file for Graph.c; lists "public" functions of Graph ADT
+
+List.c: implemenation of the Double-ended, Doubly-linked list ADT. In this assignment the List is used as a stack for holding the order of vertices in which DFS would be performed, as well as the topological sort of the Strongly Connected Components.
+
+List.h: Header file for List.c; lists "public" functions of List ADT
+
+GraphTest.c: Isolated tests to check that all required functions of Graph ADT are performing as expected.
+
+FindComponents.c: Takes an input file in the specified format and constructs a directed graph from the contents of the input file. This Graph client then prints the adjacency list representaion of this graph to the output file (specified as an argument when running the executable). Then FindComponents runs DFS, pushes vertices onto a stack (List) as they finish, calculates the transpose of the original Graph, then runs DFS on the transpose in the vertex order of the stack. Again, as vertices finish (Blacken) they are pushed onto the stack. The stack then represents the strongly connected components of the original Graph. These components are then printed to the output file.
+
+Makefile: makefile for assembling GraphTest and FindComponents executables, as well as cleaning the directory of all related object/executable files and memory leak (valgrind) testing
+
+README: List of files to be submitted for pa5 and their descriptions/contributions.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

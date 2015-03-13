@@ -1,0 +1,12 @@
+# prog
+# shell script for lab2
+
+pwd > result
+echo >> result
+fs la public >> result
+echo >> result
+fs la private >> result
+echo >> result
+ls -l >> result
+echo >> result
+java HelloWorld >> result

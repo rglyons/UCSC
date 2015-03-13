@@ -1,0 +1,25 @@
+Robert Lyons
+rglyons
+pa4
+2-26-26
+README
+
+Files to be submitted for pa4-------------------------------------------------------------------------------
+
+List.c: implemenation of the Double-ended, Doubly-linked list ADT. In this assignment the List is used to keep track of the paths from vertex to vertex. It also acts as the Queue in BFS.
+
+List.h: header file for the List ADT. Lists off "public funtions in List.c.
+
+Graph.c: Implementation of the Graph ADT. This file defines functions for creating and editing a graph of vertices and edges/arcs (or rather, the adjacency list representation of a graph). It is the "Black Box" for the FindPath client and GraphTest client.
+
+Graph.h: header file for Graph.c - "public" functions
+
+GraphTest.c: Graph client for testing Graph.c to check for full functionality and bugs.
+
+FindPath.c: Main client for Graph.c. Takes the input from an input file (specified as an operand when running the executable), parses the formatted numbers, and builds the corresponding graph. Then the shortest paths (also specified in the input file) and their distances are calculated. After all of this FindPath writes the adjacency list representation of the graph specified in the input file and the calculated distances/shortest paths to the output file, which is also specified as an operand when running the executable.
+
+Makefile: Makefile for creating GraphTest and FindPath executables
+
+README
+
+-------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,5 @@
+1. In Sentence 4, the word "books" should be "book."
+2. In Sentence 5, when using the sentence code 2, there is no period after the word "sent"
+3. In Sentence 3, when using the sentence code 3, "last weekend" fills the blank when it should be "next weekend."
+4. In Sentence 2, when using the sentence code 4, "hot" is printed in the blank when it should be "cold."
+5. If an invalid sentence code is used (for example, 6 1), the system prints "6 is a valid sentence code." In reality 6 is an invalid code, so the system should print "6 is an invallid sentence code."

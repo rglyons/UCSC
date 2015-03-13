@@ -1,0 +1,149 @@
+r start
+d You are laying in bed, about to go to sleep. 
+d It sounds like something is shuffling around in the house. 
+d You're getting nervous; something could be in your house that wants to hurt you. 
+o fall asleep. 
+t sleeping
+o investigate your room
+t room
+x hello
+
+r sleeping
+d You're dreaming of candy mountain. 
+d SLAM! A loud noise wakes you up. 
+o fall asleep
+t sleeping
+o investigate your room
+t room
+
+r room
+d Whatever you heard could have been nearby or far away, it's hard to tell. 
+d Checking out your room couldn't hurt. 
+o check closet
+t closet
+o check under bed
+t under bed
+o leave your room
+t hallway
+
+r closet
+d You open up your closet. 
+d nothing but shirts and jackets...
+d SLAM! There's that noise again. 
+o go back to investigating room
+t room
+o go back to bed
+t start
+o hide in closet
+t closet hide
+
+r under bed
+d What's under your bed?
+d It's just a bunch of junk that you should probably throw away.
+o go back top investigating room
+t room
+o go back to bed
+t start
+o hide under bed
+t bed hide
+
+r closet hide
+d You crawl into your closet and shut the door. 
+d SLAM! The noise again, this time much closer. 
+d Suddenly the door flings open and everything goes black. 
+d YOU LOSE. 
+d Restart (r) or undo (z) or quit (q)
+o Back to start
+t start
+
+r bed hide
+d You crawl under your bed. 
+d SLAM! The noise again, this time much closer. 
+d Something grabs your feet and drags you out from under your bed. Everything goes black. 
+d YOU LOSE. 
+d Restart (r) or undo (z) or quit (q)
+o Back to start
+t start
+
+r hallway
+d You walk out of your room and into the hallway. 
+d You look left: nothing. 
+d you look right: also nothing. 
+d The kitchen is to the left, and the living room is to the right. 
+o go to the kitchen
+t kitchen
+o check out the living room
+t living room
+o return to your room
+t room
+
+r living room
+d After walking into the living room and looking around, it's pretty clear that whatever is making the noise isn't there.
+d It feels like there's slime or something under your feet, though. Gross.
+o investigate the kitchen
+t kitchen
+o go back to your room
+t room
+
+r kitchen
+d You walk into the kitchen and freeze. 
+d There's a silhouette of a strangely shaped creature in the corner. 
+d It sounds like it's eating something...
+d Suddenly the creature spins around, drops what it was eating, and moves swiftly out the back door. 
+o chase the beast!
+t outside
+o investigate the food on the floor
+t food
+o hide under your bed
+t bed hide
+
+r food
+d You walk over to the heap of food on the ground. 
+d After taking a closer look, you realize the the beast was eating spaghetti...
+o chase the beast!
+t outside
+o hide under your bed
+t bed hide 
+
+r outside
+d You sprint out the back door in pursuit of the beast.
+d Once outside, you turn and see the beast illuminated in the moonlight.
+d IT'S THE SPAGHETTI MONSTER (ohmygawd)
+d The beast charges you, but you took ballet so you quickly side step to avoid its attack
+o attack the beast!
+t attack
+o hide in your closet
+t closet hide
+
+r attack
+d You run into the kitchen, grab two forks, and then confront the beast once more.
+d The beast looks confused.
+d You jump the beast and begin to eat away at it.
+d The beast wimpers and wails, and finally falls to the ground.
+o FINISH HIM
+t byebye m8
+o have mercy on the beast
+t mercy
+
+r mercy
+d You don't have it in you to deliver the final blow.
+d You step away from the beast and return to your room.
+d Once you crawl into your bed and snuggle up again, it isn't long before you fall fast asleep.
+d SLAM!
+d Everything goes black.
+d YOU LOSE
+d Restart (r) or undo (z) or quit (q)
+o Back to start
+t start
+
+r byebye m8
+d You step onto the beast with your right foot and look down at it.
+d So pathetic.
+d No beast can best you in your home.
+d After one last breath, you strike the final blow.
+d The beast gurgles and goes limp.
+d Congratulations! You can now sleep soundly.
+d YOU WIN!
+d Restart (r) or undo(z) or quit (q)
+o Back to start
+t start

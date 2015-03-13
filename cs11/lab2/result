@@ -1,0 +1,21 @@
+/afs/cats.ucsc.edu/users/q/rglyons/cs11/lab2
+
+Access list for public is
+Normal rights:
+  system:operator rlidwk
+  system:authuser rlid
+  system:anyuser rl
+  rglyons rlidwka
+
+Access list for private is
+Normal rights:
+  rglyons rlidwka
+
+total 7
+-rw-r--r--. 1 rglyons users  439 Jan 15 21:23 HelloWorld.class
+drwxr-xr-x. 2 rglyons users 2048 Jan 15 21:13 private
+-rwx------. 1 rglyons users  194 Jan 15 21:26 prog
+drwxr-xr-x. 2 rglyons users 2048 Jan 15 21:13 public
+-rw-r--r--. 1 rglyons users  235 Jan 15 21:28 result
+
+Hello, my name is Robert.

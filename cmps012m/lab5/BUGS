@@ -1,0 +1,24 @@
+Robert Lyons
+rglyons
+cmps012m
+11/13/14
+BUGS
+List of bugs in list.c and the changes made to make it run correctly without memory leaks
+
+list.c line 24: Nodes u and v are not being constrcted as pointer nodes. The next of a node must point to what is one step out in memory, if you will. When u and v are not pointer nodes
+		this means that u.next points to the memory address of v rather than the node v, and v in turn points to head. Head then gets the memory address of u rather than u itself,
+		resulting in a sort of circular linked list where the head points to the address of u, u points to the address of v, and v points to head. Essentially u points to v and v 
+		points to u. It is for this reason that the original program hangs at the list_remove(10) command, because it is stuck in a while loop searching for the value 10, but it can 		     never find that value as it is stuck in this circle. This problem is easily fixed by changing u and v into pointer nodes (and adding a conditional to check if head is empty 		  to make things clear and clean). Of course after this change is made you must initialize u and v using malloc.
+
+list.c line 37: Trying to remove anyhing from an empty list will throw an exception and crash the program (at least). A simply conditional checking for head == NULL and immediately
+		returning if true fixes this problem.
+
+list.c line 41: The code in place here will just remove reference to the argument node of list_remove(). However, that memory is still allocated and must be freed. To fix this a pointer
+		node *temp was created, and in the conditional checking if n->next->value == v, temp is given n->next, n-next then points to n->next->next, and temp is then freed. This way 		     no extra memory gets lost or is laying around unused. Also added was an else statement to simply report that the argument value of list_destroy() was not found and then
+		return in the situation where v is not found in the entire list.
+
+list.c line 60: Freeing the head in list_destroy() does not free the rest of the list. This results in a null head but the other nodes in the list are floating in memory still. They all
+		must be freed. To do this a pointer node *temp is created and initialized as NULL. After this a conditional checks if the head is null and then immediately returns if it is. 		     Finally a while loop is set up that runs until head->next is NULL. The loop starts from the head, gives the node *head to temp, moves "head" to head->next, and then frees 
+		temp. Once head->next is null the loop will break and head is then freed separately and thus all nodes were freed.
+
+
