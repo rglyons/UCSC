@@ -1,0 +1,8 @@
+* 516933a greet.java changes made, now officially ready for submission
+* 0f574db Makefile PHONYs perfected, greetings.java fixed, ready for submission
+* 40067a6 PHONYs added to Makefile but not perfect, greetings.java throwing pointer exception
+* a9e25f6 Addition of previously untracked files, ready for submission for LAB2 assignment
+* 244c414 Files complete according to LAB2 directions
+* 8ec340b Initial blank versions of java source files
+* 8399150 First revision
+* 59ed09a Initial commit of a blank makefile
